@@ -1,0 +1,93 @@
+/* MCP Client Plugin Styles */
+
+.mcp-status {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: var(--background-secondary);
+}
+
+.status-connected {
+  color: var(--text-success);
+}
+
+.status-disconnected {
+  color: var(--text-error);
+}
+
+.mcp-controls {
+  margin-bottom: 20px;
+}
+
+.mcp-controls button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mcp-controls button:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.mcp-resources, .mcp-tools {
+  margin-bottom: 20px;
+}
+
+.mcp-resources h3, .mcp-tools h3 {
+  margin-bottom: 10px;
+  color: var(--text-normal);
+}
+
+.resource-item, .tool-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 5px;
+  background-color: var(--background-primary);
+}
+
+.resource-item strong, .tool-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-accent);
+}
+
+.resource-item p, .tool-item p {
+  margin: 5px 0;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.resource-item code {
+  display: block;
+  margin: 5px 0;
+  padding: 2px 4px;
+  background-color: var(--background-secondary);
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.resource-item button, .tool-item button {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: var(--interactive-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.resource-item button:hover, .tool-item button:hover {
+  background-color: var(--interactive-hover);
+}
+
+.resource-list, .tool-list {
+  max-height: 300px;
+  overflow-y: auto;
+}

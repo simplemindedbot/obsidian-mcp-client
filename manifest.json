@@ -1,0 +1,11 @@
+{
+  "id": "mcp-client",
+  "name": "MCP Client",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Connect to Model Context Protocol servers and access external resources",
+  "author": "Your Name",
+  "authorUrl": "",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}
