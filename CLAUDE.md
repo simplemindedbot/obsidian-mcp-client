@@ -74,6 +74,7 @@ This is an Obsidian plugin that implements a Model Context Protocol (MCP) client
 **Server Presets:** Built-in configurations for AI Humanizer, Sequential Thinking, Claude Code, Memory, and Obsidian MCP Tools
 
 **Example Configuration:**
+
 ```json
 {
   "mcpServers": {
@@ -91,6 +92,7 @@ This is an Obsidian plugin that implements a Model Context Protocol (MCP) client
 ## Current Implementation Status
 
 **✅ Fully Working:**
+
 - WebSocket MCP server connections with full JSON-RPC 2.0 support
 - Multi-server management with individual controls
 - Resource browsing and document insertion at cursor position
@@ -100,6 +102,7 @@ This is an Obsidian plugin that implements a Model Context Protocol (MCP) client
 - Comprehensive settings UI with server presets
 
 **❌ Not Yet Implemented:**
+
 - STDIO connections (main blocker for Claude Desktop config compatibility)
 - HTTP/SSE transport for web-based MCP servers
 - Tool parameters (tools called with empty parameters only)
@@ -107,6 +110,7 @@ This is an Obsidian plugin that implements a Model Context Protocol (MCP) client
 - Authentication mechanisms (API keys, OAuth)
 
 **🔄 Partially Working:**
+
 - Config file support (works but only WebSocket configs are fully supported)
 - Error handling (basic retry logic, could be more robust)
 - Content formatting (works for most cases, complex objects may not render perfectly)
@@ -114,6 +118,7 @@ This is an Obsidian plugin that implements a Model Context Protocol (MCP) client
 ## Development Roadmap
 
 See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized features. **High priority items:**
+
 1. STDIO connection implementation (enables Claude Desktop config compatibility)
 2. HTTP/SSE transport support
 3. Tool parameter support for interactive tool usage
@@ -123,6 +128,7 @@ See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized fe
 ### Major Implementation (July 14, 2025)
 
 **Core Features Added:**
+
 - **Complete WebSocket MCP client** with JSON-RPC 2.0 protocol support
 - **Multi-server management** with individual connection controls
 - **Claude Desktop-compatible JSON configuration** system with extensions
@@ -131,6 +137,7 @@ See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized fe
 - **Server presets** for common MCP servers (AI Humanizer, Sequential Thinking, etc.)
 
 **Technical Infrastructure:**
+
 - **Connection reliability** with exponential backoff retry logic (configurable attempts and delays)
 - **Connection timeouts** to prevent hanging connections (default 10s)
 - **URL validation** ensuring only valid WebSocket URLs are accepted
@@ -139,6 +146,7 @@ See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized fe
 - **Memory leak prevention** through proper resource cleanup
 
 **User Experience:**
+
 - **Comprehensive settings interface** with server add/edit/delete operations
 - **Real-time status indicators** showing connection progress and retry attempts
 - **Better error feedback** with last error messages displayed in UI
@@ -146,6 +154,7 @@ See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized fe
 - **Visual indicators** for connecting, connected, disconnected, and error states
 
 **Development Improvements:**
+
 - **TypeScript config** updated with `allowSyntheticDefaultImports` and `esModuleInterop`
 - **Enhanced CSS classes** for status states (`.status-connecting`, `.status-error`, disabled button styles)
 - **Typed error interfaces** (`MCPError`, `ConnectionOptions`, `ConnectionStatus`)
@@ -158,7 +167,8 @@ See [TODO.md](TODO.md) for comprehensive development roadmap with prioritized fe
 - **Protocol version**: 2024-11-05 with full capability negotiation
 - **Multi-transport ready**: Architecture supports WebSocket, STDIO, and HTTP (WebSocket only implemented)
 
-# important-instruction-reminders
+## important-instruction-reminders
+
 Do what has been asked; nothing more, nothing less.
 NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.

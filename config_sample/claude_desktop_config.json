@@ -29,7 +29,7 @@
     },
     "claudeCode": {
       "command": "claude",
-      "args": ["mcp", "start"],
+      "args": ["mcp", "serve"],
       "env": {}
     },
     "memory": {
