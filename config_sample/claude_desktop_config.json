@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "ai-humanizer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ai-humanizer-mcp-server"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "mcp-sequentialthinking-tools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-sequentialthinking-tools"
+      ]
+    },
+    "obsidian-mcp-tools": {
+      "command": "/path/to/obsidian-mcp-tools/bin/mcp-server",
+      "env": {
+        "OBSIDIAN_API_KEY": "your-api-key-here"
+      }
+    },
+    "claudeCode": {
+      "command": "claude",
+      "args": ["mcp", "start"],
+      "env": {}
+    },
+    "memory": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "-v",
+        "claude-memory:/app/dist",
+        "--rm",
+        "mcp/memory"
+      ]
+    }
+  }
+}

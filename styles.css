@@ -15,6 +15,16 @@
   color: var(--text-error);
 }
 
+.status-connecting {
+  color: var(--text-accent);
+}
+
+.status-error {
+  color: var(--text-error);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
 .mcp-controls {
   margin-bottom: 20px;
 }
@@ -29,8 +39,13 @@
   cursor: pointer;
 }
 
-.mcp-controls button:hover {
+.mcp-controls button:hover:not(:disabled) {
   background-color: var(--interactive-accent-hover);
+}
+
+.mcp-controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .mcp-resources, .mcp-tools {
@@ -72,8 +87,13 @@
   color: var(--text-muted);
 }
 
-.resource-item button, .tool-item button {
+.button-container {
+  display: flex;
+  gap: 8px;
   margin-top: 8px;
+}
+
+.resource-item button, .tool-item button {
   padding: 4px 8px;
   background-color: var(--interactive-normal);
   color: var(--text-normal);
@@ -90,4 +110,108 @@
 .resource-list, .tool-list {
   max-height: 300px;
   overflow-y: auto;
+}
+
+/* Multi-server styling */
+.mcp-server {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: var(--background-primary-alt);
+}
+
+.mcp-server h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--text-accent);
+}
+
+.mcp-server h4 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: var(--text-normal);
+}
+
+.mcp-global-controls {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: var(--background-secondary);
+  border-radius: 6px;
+}
+
+.mcp-global-controls button {
+  margin-right: 8px;
+}
+
+/* Settings styling */
+.server-setting {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: var(--background-primary-alt);
+}
+
+.server-details {
+  margin-top: 12px;
+  padding-left: 16px;
+  border-left: 2px solid var(--background-modifier-border);
+}
+
+/* Preset server styling */
+.preset-servers {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: var(--background-secondary);
+  border-radius: 6px;
+}
+
+.preset-servers h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text-accent);
+}
+
+.preset-button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: var(--interactive-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.preset-button:hover {
+  background-color: var(--interactive-hover);
+}
+
+.preset-button:last-child {
+  margin-bottom: 0;
+}
+
+/* Config info styling */
+.config-info {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: var(--background-secondary);
+  border-radius: 6px;
+  border-left: 4px solid var(--text-accent);
+}
+
+.config-info h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text-accent);
+}
+
+.config-info p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9em;
 }

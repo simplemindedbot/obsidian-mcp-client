@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "ai-humanizer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ai-humanizer-mcp-server"
+      ],
+      "connectionType": "stdio",
+      "enabled": true,
+      "autoConnect": false
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "connectionType": "stdio",
+      "enabled": true,
+      "autoConnect": false
+    },
+    "test-websocket": {
+      "command": "websocket",
+      "connectionType": "websocket",
+      "url": "ws://localhost:3000",
+      "enabled": true,
+      "autoConnect": false
+    },
+    "obsidian-mcp-tools": {
+      "command": "/Users/scotcampbell/GitHub/quartz/content/.obsidian/plugins/mcp-tools/bin/mcp-server",
+      "env": {
+        "OBSIDIAN_API_KEY": "your-api-key-here"
+      },
+      "connectionType": "stdio",
+      "enabled": true,
+      "autoConnect": false
+    }
+  }
+}

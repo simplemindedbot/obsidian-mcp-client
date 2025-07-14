@@ -11,6 +11,8 @@
     "importHelpers": true,
     "declaration": true,
     "outDir": "./lib",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "typeRoots": [
       "node_modules/@types"
     ],
